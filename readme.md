@@ -21,7 +21,7 @@ perform? - *.csv file will not be loaded directly into memory, parser will read 
 3. How would your application perform in peak periods (millions of requests per
    minute)? - as you can see in `Structure and description` api gateway should work behind network balancer, we have possibility to scale and grow number of working api gateway, also we using `reddis` as a cache
 4. How would you operate this app in production (e.g. deployment, scaling, monitoring)? - all aspects of working in production can be configured in `env.json` also scale via K8S or something like this. 
-
+5. SUGGESTION: price used as `float` and in test task described as float in database. I suggest to use integer instead of float(price*100), math actions  with float sometimes contain surprises, much easy to work with integer, always is easy convert to float to show, but actions is safe with integers
 <!-- REQUIREMENTS -->
 ## Requirements
 Needed to install and run:
